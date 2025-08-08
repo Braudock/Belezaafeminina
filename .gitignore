@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build artifacts
+build/
+dist/
+*.spec
+
+# Virtual environment
+venv/
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+
+# Local secrets
+credentials_oauth.json
+token.pickle
+
+# Data files
+*.csv
+*.xlsx
+*.ico
+
+# Other
+.roo/
+.roomodes
+Node.js/
+Roo-Code/
+debug/

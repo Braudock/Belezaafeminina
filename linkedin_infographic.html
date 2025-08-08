@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico: Guia Visual para Dominar o LinkedIn em 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F7F7F7;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 40vh;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            line-height: 1;
+            color: #C1D4D9;
+        }
+    </style>
+</head>
+<body class="bg-[#F7F7F7] text-[#001f3f]">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#004E98] mb-2">Guia Visual para Dominar o LinkedIn</h1>
+            <p class="text-xl md:text-2xl font-light text-[#3A6EA5]">Estratégias para conteúdo de destaque em 2025</p>
+        </header>
+
+        <main class="space-y-8">
+
+            <section class="bg-white rounded-lg shadow-lg p-6 md:p-8 text-center">
+                <h2 class="text-2xl font-bold text-[#004E98] mb-2">A Nova Filosofia do Algoritmo</h2>
+                <p class="text-5xl md:text-7xl font-extrabold text-[#3A6EA5] tracking-tight">
+                    Conversas Relevantes
+                </p>
+                <p class="text-3xl font-light text-gray-500 my-2">&gt;</p>
+                <p class="text-4xl md:text-5xl font-bold text-gray-400">
+                    Viralidade Genérica
+                </p>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">Em 2025, o LinkedIn prioriza conteúdo que gera discussões autênticas e demonstra conhecimento especializado. O objetivo é agregar valor à comunidade, não apenas acumular visualizações.</p>
+            </section>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                    <h3 class="text-xl font-bold text-center text-[#004E98] mb-4">Formatos com Maior Poder de Engajamento</h3>
+                    <p class="text-center text-gray-600 mb-6">O algoritmo favorece formatos que retêm a atenção e incentivam a interação direta. A escolha correta do formato é o primeiro passo para aumentar seu alcance.</p>
+                    <div class="chart-container flex-grow">
+                        <canvas id="formatosChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                    <h3 class="text-xl font-bold text-center text-[#004E98] mb-4">Temas em Alta para Gerar Discussão</h3>
+                     <p class="text-center text-gray-600 mb-6">Alinhe seu conteúdo com os tópicos mais relevantes para o mundo profissional. O tamanho da bolha representa o potencial de impacto e interesse do tema.</p>
+                    <div class="chart-container flex-grow">
+                        <canvas id="temasChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <section class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-bold text-center text-[#004E98] mb-6">A Anatomia de um Post Perfeito</h3>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-center">
+                    <div class="p-4 border-2 border-dashed border-[#C1D4D9] rounded-lg">
+                        <p class="text-2xl mb-1">🎣</p>
+                        <h4 class="font-bold text-[#004E98]">Hook Impactante</h4>
+                        <p class="text-sm text-gray-600">A primeira linha decide tudo.</p>
+                    </div>
+                    <div class="flow-arrow transform md:-rotate-0">↓</div>
+                    <div class="p-4 border-2 border-dashed border-[#C1D4D9] rounded-lg">
+                        <p class="text-2xl mb-1">📄</p>
+                        <h4 class="font-bold text-[#004E98]">Parágrafos Curtos</h4>
+                        <p class="text-sm text-gray-600">Facilita a leitura mobile.</p>
+                    </div>
+                    <div class="flow-arrow transform md:-rotate-0">↓</div>
+                    <div class="p-4 border-2 border-dashed border-[#C1D4D9] rounded-lg">
+                        <p class="text-2xl mb-1">💡</p>
+                        <h4 class="font-bold text-[#004E98]">Emojis Estratégicos</h4>
+                        <p class="text-sm text-gray-600">Adiciona personalidade.</p>
+                    </div>
+                    <div class="flow-arrow transform md:-rotate-0">↓</div>
+                    <div class="p-4 border-2 border-dashed border-[#C1D4D9] rounded-lg">
+                        <p class="text-2xl mb-1">❓</p>
+                        <h4 class="font-bold text-[#004E98]">CTA com Pergunta</h4>
+                        <p class="text-sm text-gray-600">Incentiva a interação.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-center text-[#004E98] mb-6">Segredos do Algoritmo Revelados</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <p class="text-5xl mb-2">💬 &gt; 👍</p>
+                        <h4 class="font-bold text-[#004E98]">Comentários Valem Mais</h4>
+                        <p class="text-sm text-gray-600">Um comentário de qualidade tem um peso muito maior que um simples like para o alcance.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <p class="text-5xl mb-2">🎯</p>
+                        <h4 class="font-bold text-[#004E98]">Seja um Especialista</h4>
+                        <p class="text-sm text-gray-600">Conteúdo de nicho e aprofundado é recompensado. Fale sobre o que você domina.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <p class="text-5xl mb-2">⚡️</p>
+                        <h4 class="font-bold text-[#004E98]">Interaja em 2 Horas</h4>
+                        <p class="text-sm text-gray-600">Responder aos comentários rapidamente impulsiona a distribuição do seu post.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-bold text-center text-[#004E98] mb-6">Checklist Final Antes de Publicar</h3>
+                <ul class="space-y-3 max-w-md mx-auto">
+                    <li class="flex items-start">
+                        <span class="text-green-500 text-2xl mr-3">✅</span>
+                        <div>
+                            <h4 class="font-semibold text-[#3A6EA5]">Valor Agregado</h4>
+                            <p class="text-sm text-gray-600">O conteúdo é genuinamente útil para a minha audiência?</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 text-2xl mr-3">✅</span>
+                        <div>
+                            <h4 class="font-semibold text-[#3A6EA5]">Curiosidade</h4>
+                            <p class="text-sm text-gray-600">A primeira linha é magnética e convida à leitura?</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 text-2xl mr-3">✅</span>
+                        <div>
+                            <h4 class="font-semibold text-[#3A6EA5]">Formato Correto</h4>
+                            <p class="text-sm text-gray-600">Usei o melhor formato (vídeo, carrossel, etc.) para esta mensagem?</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 text-2xl mr-3">✅</span>
+                        <div>
+                            <h4 class="font-semibold text-[#3A6EA5]">CTA Claro</h4>
+                            <p class="text-sm text-gray-600">Estou convidando a audiência para a conversa com uma pergunta?</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 text-2xl mr-3">✅</span>
+                        <div>
+                            <h4 class="font-semibold text-[#3A6EA5]">Revisão Final</h4>
+                            <p class="text-sm text-gray-600">O texto está impecável, sem erros de digitação ou gramática?</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 py-6 border-t border-gray-200">
+            <p class="text-gray-600">Use este guia para criar conteúdo autêntico e relevante. O sucesso no LinkedIn é uma maratona, não um sprint.</p>
+        </footer>
+    </div>
+
+    <script>
+        const brilliantBlues = {
+            primary: '#004E98',
+            secondary: '#3A6EA5',
+            lightAccent: '#C1D4D9',
+            background: '#F7F7F7',
+            white: '#FFFFFF'
+        };
+
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine.length > 0) {
+                lines.push(currentLine);
+            }
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const defaultChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: brilliantBlues.secondary,
+                        font: {
+                            family: "'Inter', sans-serif"
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: brilliantBlues.primary,
+                    titleFont: { family: "'Inter', sans-serif", size: 14 },
+                    bodyFont: { family: "'Inter', sans-serif", size: 12 },
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: { color: brilliantBlues.secondary },
+                    grid: { color: '#E0E0E0' }
+                },
+                x: {
+                    ticks: { color: brilliantBlues.secondary },
+                    grid: { display: false }
+                }
+            }
+        };
+
+        const ctxFormatos = document.getElementById('formatosChart');
+        if (ctxFormatos) {
+            new Chart(ctxFormatos, {
+                type: 'bar',
+                data: {
+                    labels: ['Sondagens', 'Carrosséis', 'Vídeos', 'Listas "Como Fazer"'],
+                    datasets: [{
+                        label: 'Potencial de Engajamento',
+                        data: [95, 85, 80, 75],
+                        backgroundColor: [
+                            '#3A6EA5',
+                            '#5D8AA8',
+                            '#7F9FB9',
+                            '#A1B4CA'
+                        ],
+                        borderColor: brilliantBlues.primary,
+                        borderWidth: 1,
+                        borderRadius: 5
+                    }]
+                },
+                options: defaultChartOptions
+            });
+        }
+
+        const ctxTemas = document.getElementById('temasChart');
+        if (ctxTemas) {
+            new Chart(ctxTemas, {
+                type: 'bubble',
+                data: {
+                    datasets: [{
+                        label: 'Transformações de Mercado',
+                        data: [{ x: 10, y: 15, r: 25 }],
+                        backgroundColor: 'rgba(58, 110, 165, 0.7)'
+                    }, {
+                        label: 'Desenvolvimento Profissional',
+                        data: [{ x: 18, y: 22, r: 22 }],
+                        backgroundColor: 'rgba(0, 78, 152, 0.7)'
+                    }, {
+                        label: 'Insights Práticos',
+                        data: [{ x: 25, y: 12, r: 19 }],
+                        backgroundColor: 'rgba(93, 138, 168, 0.7)'
+                    }, {
+                        label: 'Histórias de Carreira',
+                        data: [{ x: 14, y: 28, r: 16 }],
+                        backgroundColor: 'rgba(193, 212, 217, 0.8)'
+                    }]
+                },
+                options: {
+                     responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                             labels: {
+                                color: brilliantBlues.secondary,
+                                font: { family: "'Inter', sans-serif" }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { display: false },
+                        y: { display: false }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
