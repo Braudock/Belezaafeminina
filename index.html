@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenidade Floral - Seu Refúgio de Bem-Estar</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Alpine.js para interatividade (ex: menu mobile) -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .video-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -2;
+            pointer-events: none;
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.45);
+            z-index: -1;
+        }
+        .text-shadow-custom {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Barra de Navegação Fixa -->
+    <nav x-data="{ isOpen: false }" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-md">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-pink-500 font-serif">Serenidade Floral</a>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#sobre" class="text-gray-600 hover:text-pink-500 transition-colors">Sobre</a>
+                    <a href="#experiencias" class="text-gray-600 hover:text-pink-500 transition-colors">Experiências</a>
+                    <a href="#galeria" class="text-gray-600 hover:text-pink-500 transition-colors">Galeria</a>
+                    <a href="#contato" class="bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-full transition-colors">Reserve Agora</a>
+                </div>
+
+                <!-- Botão Menu Mobile -->
+                <div class="md:hidden">
+                    <button @click="isOpen = !isOpen" class="text-gray-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Menu Mobile Dropdown -->
+            <div x-show="isOpen" @click.away="isOpen = false" class="md:hidden mt-3">
+                <a href="#sobre" class="block py-2 px-4 text-sm text-gray-600 hover:bg-pink-50 rounded">Sobre</a>
+                <a href="#experiencias" class="block py-2 px-4 text-sm text-gray-600 hover:bg-pink-50 rounded">Experiências</a>
+                <a href="#galeria" class="block py-2 px-4 text-sm text-gray-600 hover:bg-pink-50 rounded">Galeria</a>
+                <a href="#contato" class="block mt-2 text-center bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-full transition-colors">Reserve Agora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero com Vídeo de Fundo -->
+    <header class="hero-section text-center">
+        <div class="video-overlay"></div>
+        <iframe
+            class="video-background"
+            src="https://www.youtube.com/embed/bXlQ3Mw4uGc?autoplay=1&mute=1&loop=1&playlist=bXlQ3Mw4uGc&controls=0&showinfo=0&autohide=1&modestbranding=1&rel=0"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+        </iframe>
+        <div class="z-10 p-4">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 text-shadow-custom">Serenidade Floral</h1>
+            <p class="text-lg md:text-2xl max-w-2xl mx-auto text-shadow-custom">Um refúgio de bem-estar, onde a natureza cuida de você.</p>
+            <a href="#experiencias" class="mt-8 inline-block bg-pink-400 hover:bg-pink-500 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 duration-300 ease-in-out shadow-lg">
+                Explore Nossas Experiências
+            </a>
+        </div>
+    </header>
+
+    <!-- Seção "Conecte-se com a Essência da Vida" -->
+    <section id="sobre" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <img src="https://placehold.co/800x600/fecdd3/9d174d?text=Flores+Delicadas" alt="Campo de flores rosas sob a luz do sol" class="rounded-lg shadow-2xl w-full h-auto object-cover">
+                </div>
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Conecte-se com a Essência da Vida</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        No Serenidade Floral, acreditamos no poder curativo da natureza. Nosso retiro é um santuário projetado para restaurar seu equilíbrio, acalmar sua mente e nutrir sua alma. Rodeado por paisagens deslumbrantes e o aroma suave das flores, cada momento aqui é um convite para a paz interior.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção "Nossas Experiências" -->
+    <section id="experiencias" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Nossas Experiências</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+                Oferecemos uma variedade de atividades para harmonizar corpo, mente e espírito.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card de Experiência 1: Meditação Guiada -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex justify-center mb-4"><div class="bg-pink-100 p-4 rounded-full"><svg class="w-10 h-10 text-pink-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 3a1 1 0 00-.866.5L6.5 8.5a1 1 0 000 1l2.634 5a1 1 0 001.732 0l2.634-5a1 1 0 000-1L10.866 3.5A1 1 0 0010 3zm0 2.618L11.366 8H8.634L10 5.618zM15 11a1 1 0 01-1 1h-2.5a1 1 0 110-2H14a1 1 0 011 1zm-5 4a1 1 0 01-1 1H6a1 1 0 110-2h3a1 1 0 011 1z" clip-rule="evenodd"></path></svg></div></div>
+                    <h3 class="text-2xl font-bold mb-2">Meditação Guiada</h3>
+                    <p class="text-gray-600">Encontre a quietude interior com sessões diárias de meditação ao nascer e ao pôr do sol.</p>
+                </div>
+                <!-- Card de Experiência 2: Yoga na Natureza -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                     <div class="flex justify-center mb-4"><div class="bg-pink-100 p-4 rounded-full"><svg class="w-10 h-10 text-pink-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 9a1 1 0 011-1h1a1 1 0 010 2H5a1 1 0 01-1-1zm11 0a1 1 0 00-1 1v1a1 1 0 102 0v-1a1 1 0 00-1-1zM7.05 6.05a1 1 0 00-1.414-1.414L4.22 6.05a1 1 0 101.414 1.414l1.414-1.414zm8.486 8.486a1 1 0 01-1.414 1.414l-1.414-1.414a1 1 0 011.414-1.414l1.414 1.414zM10 18a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zM4.929 14.5a1 1 0 101.414-1.414L4.929 11.5a1 1 0 00-1.414 1.414l1.414 1.414z"></path><path fill-rule="evenodd" d="M10 5a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg></div></div>
+                    <h3 class="text-2xl font-bold mb-2">Yoga na Natureza</h3>
+                    <p class="text-gray-600">Pratique yoga em decks ao ar livre, sentindo a energia da terra e a brisa suave.</p>
+                </div>
+                <!-- Card de Experiência 3: Terapias Holísticas -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                     <div class="flex justify-center mb-4"><div class="bg-pink-100 p-4 rounded-full"><svg class="w-10 h-10 text-pink-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"></path></svg></div></div>
+                    <h3 class="text-2xl font-bold mb-2">Terapias Holísticas</h3>
+                    <p class="text-gray-600">Desfrute de massagens relaxantes, aromaterapia e outros tratamentos rejuvenescedores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Galeria -->
+    <section id="galeria" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12">Galeria de Momentos</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="grid gap-4">
+                    <div><img class="h-auto max-w-full rounded-lg shadow-md transition-transform transform hover:scale-105" src="https://placehold.co/800x600/fecdd3/9d174d?text=Jardim+Secreto" alt="Jardim Secreto"></div>
+                    <div><img class="h-auto max-w-full rounded-lg shadow-md transition-transform transform hover:scale-105" src="https://placehold.co/800x600/c4b5fd/6d28d9?text=Paz+Interior" alt="Cena de paz interior"></div>
+                </div>
+                <div class="grid gap-4">
+                    <div><img class="h-auto max-w-full rounded-lg shadow-md transition-transform transform hover:scale-105" src="https://placehold.co/800x1200/f9a8d4/831843?text=Harmonia" alt="Cena de harmonia"></div>
+                </div>
+                <div class="grid gap-4">
+                    <div><img class="h-auto max-w-full rounded-lg shadow-md transition-transform transform hover:scale-105" src="https://placehold.co/800x600/93c5fd/1e3a8a?text=Natureza+Pura" alt="Cena da natureza"></div>
+                    <div><img class="h-auto max-w-full rounded-lg shadow-md transition-transform transform hover:scale-105" src="https://placehold.co/800x600/a7f3d0/047857?text=Renova%C3%A7%C3%A3o" alt="Cena de renovação"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">O Que Nossos Visitantes Dizem</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <p class="text-gray-600 mb-4">"Uma experiência transformadora. Saí de lá renovada e em paz. A conexão com a natureza é indescritível."</p>
+                    <p class="font-bold text-pink-500">- Maria S.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <p class="text-gray-600 mb-4">"O lugar perfeito para se desconectar da rotina e se reconectar consigo mesmo. As terapias são maravilhosas!"</p>
+                    <p class="font-bold text-pink-500">- João P.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <p class="text-gray-600 mb-4">"Nunca me senti tão acolhida. A equipe é atenciosa e o ambiente é de pura serenidade. Recomendo a todos."</p>
+                    <p class="font-bold text-pink-500">- Ana L.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="bg-gray-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6 lg:px-8 text-center">
+             <h2 class="text-4xl font-bold mb-4">Pronta para Florescer?</h2>
+             <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">Entre em contato e reserve seu lugar neste paraíso.</p>
+             <a href="#" class="mb-16 inline-block bg-pink-400 hover:bg-pink-500 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 duration-300 ease-in-out shadow-lg">
+                Fale Conosco
+            </a>
+            <div class="border-t border-gray-700 pt-8 mt-8">
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a href="#" class="hover:text-pink-400 transition-colors">Facebook</a>
+                    <a href="#" class="hover:text-pink-400 transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-pink-400 transition-colors">Política de Privacidade</a>
+                </div>
+                <p class="text-gray-400">&copy; 2025 Serenidade Floral. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
